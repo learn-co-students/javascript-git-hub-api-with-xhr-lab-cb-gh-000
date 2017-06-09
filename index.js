@@ -21,21 +21,23 @@ function displayCommits(event, data) {
 
   const commitsListItems = commits.map((commit) => {
     let commitsListItem = '<li>';
-    commitsListItem += `<strong>${commit.author.login}</strong> (${commit.commit.author.name})`;
-    commitsListItem += `- ${commit.commit.message}`;
+    commitsListItem += `<strong>${commit.author.login} (${commit.commit.author.name})</strong>`;
+    commitsListItem += ` - ${commit.commit.message}`;
     commitsListItem += '</li>';
     return commitsListItem;
   });
 
+  const commitsTitleHTML = `<h4>Commits</h4>`;
   const commitsListHTML = `<ul>${commitsListItems.join('')}</ul>`;
-  document.getElementById('details').innerHTML = commitsListHTML;
+  document.getElementById('details').innerHTML = commitsTitleHTML + commitsListHTML;
 }
 
 function displayBranches(activity, data) {
   const branches = JSON.parse(this.responseText);
   const branchesListItems = branches.map(branch => `<li>${branch.name}</li>`);
+  const branchesTitleHTML = `<h4>Branches</h4>`;
   const branchesListHTML = `<ul>${branchesListItems.join('')}</ul>`;
-  document.getElementById('details').innerHTML = branchesListHTML;
+  document.getElementById('details').innerHTML = branchesTitleHTML + branchesListHTML;
 }
 
 function getRepositories() {
