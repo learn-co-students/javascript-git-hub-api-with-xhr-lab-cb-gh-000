@@ -25,6 +25,10 @@
     </main>
     <div class="flexbox-container">
       <div>
+        <form id="search" onsubmit="getRepositories(); return false;">
+        Username:&nbsp;<input type="text" id="username"></input>
+        &nbsp;<input type="submit" value="Submit"></input>
+        </form>
         <h3>Repositories</h3>
         <div id="repositories"></div>
       </div>
@@ -39,6 +43,7 @@
     <script src="node_modules/mocha/mocha.js"></script>
     <script src="node_modules/expect/umd/expect.min.js"></script>
     <script src="node_modules/sinon/pkg/sinon.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>mocha.setup('bdd');</script>
   </body>
 </html>
