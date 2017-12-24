@@ -25,6 +25,11 @@
     </main>
     <div class="flexbox-container">
       <div>
+        <form onsubmit="getRepositories()" return false;>
+          <label>Enter Username</label>
+          <input type"text" id="username" class="username" />
+          <input type="submit" name="Submit" />
+        </form>
         <h3>Repositories</h3>
         <div id="repositories"></div>
       </div>
