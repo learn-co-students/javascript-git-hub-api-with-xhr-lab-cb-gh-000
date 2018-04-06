@@ -26,6 +26,11 @@
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
+        <form id='userForm' action='/index.js'>
+          Insert user name: <input type="text" name='name' id='userInput'>
+          <input type='button' onclick='getUserName()' value='Submit'>
+        </form>
+        <a href='#' onclick="getRepositories()">Get Repositories</a>
         <div id="repositories"></div>
       </div>
       <div>
