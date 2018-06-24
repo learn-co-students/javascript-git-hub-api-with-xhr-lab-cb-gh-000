@@ -1,4 +1,4 @@
-JavaScript GitHub API with XHR
+yhJavaScript GitHub API with XHR
 ---
 
 ## Objectives
